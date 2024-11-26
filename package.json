@@ -41,5 +41,14 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reward-steve/projects.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Reward-steve/projects/issues"
+  },
+  "homepage": "https://github.com/Reward-steve/projects#readme"
 }

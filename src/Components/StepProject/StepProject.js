@@ -32,39 +32,47 @@ export default function StepProject() {
             <div className={`${step >= 2 ? "active" : ""}`}>2</div>
             <div className={`${step >= 3 ? "active" : ""}`}>3</div>
           </div>
-          <p
-            className="message"
-            style={{
-              color: "black",
-              fontSize: ".9em",
-            }}
-          >
-            step {step}: {messages[step - 1]}
-          </p>
+          <StepMessage step={step}>{messages[step - 1]}</StepMessage>
           <div className="buttons">
-            <button
-              style={{
-                background: "#7950f2",
-                color: "#fff",
-                fontSize: ".8em",
-              }}
-              onClick={onClickPrev}
-            >
+            <Button bg="#7950f2" color="#fff" onclick={onClickPrev}>
               Previous
-            </button>
-            <button
-              style={{
-                background: "#7950f2",
-                color: "#fff",
-                fontSize: ".8em",
-              }}
-              onClick={onClickNext}
-            >
+            </Button>
+            <Button bg="#7950f2" color="#fff" onclick={onClickNext}>
               Next
-            </button>
+            </Button>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+function StepMessage({ step, children }) {
+  return (
+    <div
+      className="message"
+      style={{
+        color: "black",
+        fontSize: ".9em",
+      }}
+    >
+      <h3>step {step}:</h3>
+      {children}
+    </div>
+  );
+}
+
+function Button({ bg, color, onclick, children }) {
+  return (
+    <button
+      style={{
+        background: bg,
+        color: color,
+        fontSize: ".8em",
+      }}
+      onClick={onclick}
+    >
+      {children}
+    </button>
   );
 }

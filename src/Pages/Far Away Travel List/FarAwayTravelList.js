@@ -32,6 +32,10 @@ function FarAwayTravelList() {
     setSelect(1);
   };
 
+  const onClickClearList = () => {
+    const confirmed = window.confirm("Are you sure you want to clear List 😀");
+    if (confirmed) setItemList([]);
+  };
   const onClickRemoveList = (id) => {
     setItemList((item) => item.filter((item) => item.id !== id));
   };
@@ -62,6 +66,7 @@ function FarAwayTravelList() {
         initialItems={itemList}
         removeItem={onClickRemoveList}
         onClickCheck={addClickCheckBox}
+        setOnclickClearList={onClickClearList}
       />
       <Status item={itemList} />
     </div>

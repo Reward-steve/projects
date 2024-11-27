@@ -22,6 +22,10 @@ let navObj = [
     NavText: "EatAndSplit",
     linkTo: "/EatAndSplit",
   },
+  {
+    NavText: "Add To Cart",
+    linkTo: "/Add-To-Cart",
+  },
 ];
 export default function NavBar() {
   const [isActive, setIsActive] = useState(null);

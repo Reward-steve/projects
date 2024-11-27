@@ -5,6 +5,7 @@ import FarAwayTravelList from "./Pages/Far Away Travel List/FarAwayTravelList";
 import Accordion from "./Components/Accordion/Accordion";
 import TipCalc from "./Components/TipCalculator/TipCalc";
 import EatAndSplit from "./Components/EatAndSplit/EatAndSplit";
+import AddToCartContainer from "./Components/AddToCartModal/AddToCartContainer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Accordion" element={<Accordion />} />
         <Route path="/Tip-Calculator" element={<TipCalc />} />
         <Route path="/EatAndSplit" element={<EatAndSplit />} />
+        <Route path="Add-To-Cart" element={<AddToCartContainer />} />
       </Routes>
     </BrowserRouter>
   );

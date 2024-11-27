@@ -1,0 +1,9 @@
+.card {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: brightness(0.5);
+}
